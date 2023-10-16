@@ -1,7 +1,7 @@
 <template>
   <main>
     <h1>
-      Welcome to the Vue 3 I18n!
+      {{t("home.header")}}
     </h1>
     <p>
       This page has been visited 3 times.
@@ -9,7 +9,17 @@
   </main>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
+import { useI18n } from 'vue-i18n'
+
+export default {
+  setup() {
+    const { t } = useI18n()
+    
+    return { t }
+  }
+}
+
 
 </script>
 
