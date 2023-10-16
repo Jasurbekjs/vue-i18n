@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>
-      About us
+      {{$t("about.header")}}
     </h1>
     <p>  
       Currency: $1310.00

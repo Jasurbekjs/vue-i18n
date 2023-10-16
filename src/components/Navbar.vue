@@ -2,10 +2,14 @@
     <nav>
         <ul>
             <li>
-                <RouterLink to="/">Home</RouterLink>
+                <RouterLink to="/">
+                    {{$t("nav.home")}}
+                </RouterLink>
             </li>
             <li>
-                <RouterLink to="/about">About</RouterLink>
+                <RouterLink to="/about">
+                    {{$t("nav.about")}}
+                </RouterLink>
             </li>
         </ul>        
     </nav>
