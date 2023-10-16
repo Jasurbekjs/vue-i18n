@@ -8,7 +8,7 @@ const messages = {
         },
         home: {
             header: "Welcome to the Vue 3 I18n",
-            added_by: "JMCorp"
+            added_by: "Company {company}"
         },
         about: {
             header: "About us"
@@ -21,7 +21,7 @@ const messages = {
         },
         home: {
             header: "Добро пожаловать во Vue 3 I18n",
-            added_by: "JM Corp"
+            added_by: "Компания {company}"
         },
         about: {
             header: "О нас"

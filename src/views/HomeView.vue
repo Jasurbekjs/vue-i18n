@@ -4,7 +4,7 @@
       {{$t("home.header")}}
     </h1>
     <p>
-      {{$t("home.added_by")}}
+      {{$t("home.added_by", {company: 'JMCorp'})}}
     </p>
     <p>
       This page has been visited 3 times.
