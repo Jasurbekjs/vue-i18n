@@ -7,7 +7,7 @@
       {{$t("home.added_by", {company: 'JMCorp'})}}
     </p>
     <p>
-      This page has been visited 3 times.
+      {{$t("home.num_visits", 1)}}
     </p>
   </main>
 </template>

@@ -1,4 +1,5 @@
 import { createI18n } from "vue-i18n";
+import pluralRules from './rules/pluralization'
 
 const messages = {
     en: {
@@ -8,7 +9,8 @@ const messages = {
         },
         home: {
             header: "Welcome to the Vue 3 I18n",
-            added_by: "Company {company}"
+            added_by: "Company {company}",
+            num_visits: "This page hasn`t been visited | This page has been visited {n} time | This page has been visited {n} times"
         },
         about: {
             header: "About us"
@@ -21,7 +23,8 @@ const messages = {
         },
         home: {
             header: "Добро пожаловать во Vue 3 I18n",
-            added_by: "Компания {company}"
+            added_by: "Компания {company}",
+            num_visits: "Страницу не посещали | Страницу посещали {n} раз | Страницу посещали {n} раза | Страницу посещали {n} раз"
         },
         about: {
             header: "О нас"
@@ -34,5 +37,6 @@ export default createI18n({
     fallbackLocale: import.meta.env.VITE_FALLBACK_LOCALE, 
     legacy: false, // for vue 3
     globalInjection: true,
-    messages
+    messages,
+    pluralRules
 })
