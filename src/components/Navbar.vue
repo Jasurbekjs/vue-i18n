@@ -11,12 +11,23 @@
                     {{$t("nav.about")}}
                 </RouterLink>
             </li>
-        </ul>        
+        </ul>
+        <LanguageSwitcher />
     </nav>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
+import { defineComponent } from 'vue'
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 
+export default defineComponent({
+    setup () {
+       
+    },
+    components: {
+        LanguageSwitcher
+    }
+})
 </script>
 
 <style scoped>
