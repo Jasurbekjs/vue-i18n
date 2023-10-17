@@ -9,6 +9,9 @@ const Translations = {
         return (import.meta.env.VITE_SUPPORTED_LOCALES as string).split(",");
     },
 
+    get currentLocale () {
+        return i18n.global.locale.value;
+    },
     set currentLocale (newLocale: string) {
         i18n.global.locale.value = newLocale;
     },
@@ -59,7 +62,17 @@ const Translations = {
         await Translations.switchLocale(paramLocale);
 
         return next()
+    },
+
+    i18nRoute(to: any) {
+        return {
+          ...to,
+          params: {
+            locale: Translations.currentLocale,
+            ...to.params
+          }
         }
+    }
 }
 
 export default Translations
