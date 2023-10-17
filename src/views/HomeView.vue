@@ -9,6 +9,9 @@
     <p>
       {{$t("home.num_visits", 1)}}
     </p>
+    <p>
+      {{$d(new Date(), "longFormat")}}
+    </p>
   </main>
 </template>
 
