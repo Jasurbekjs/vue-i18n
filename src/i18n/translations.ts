@@ -47,8 +47,19 @@ const Translations = {
         Translations.currentLocale = newLocale;
         document.querySelector("html")?.setAttribute("lang", newLocale);
         localStorage.setItem("user-locale", newLocale);
-    }
+    },
 
+    async routerMiddleware (to: any, _from: any, next: any) {
+        const paramLocale = to.params.locale
+
+        if(!Translations.isLocaleSupported(paramLocale)){
+            return next(Translations.guessDefaultLocale());
+        }
+
+        await Translations.switchLocale(paramLocale);
+
+        return next()
+        }
 }
 
 export default Translations
